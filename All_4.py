@@ -70,7 +70,7 @@ series = pd.read_csv(url, sep=",", squeeze=True)
 series = pd.to_numeric(series, errors='coerce')
 series = pd.Series(np.nan_to_num(series))
 
-series[40000:50000]
+series = series[40000:50000]
 output_file = "dataset_4.csv"
 
 
