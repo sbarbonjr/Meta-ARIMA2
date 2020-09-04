@@ -82,7 +82,6 @@ q_values = range(0, 3)
 #d_values = [0]
 #q_values = [0]
 
-
 cfg = tsfel.get_features_by_domain()
 tam = 200
 tam_janela = np.round(len(series)/tam)
