@@ -56,7 +56,7 @@ def evaluate_models(dataset, p_values, d_values, q_values):
   return best_cfg, best_score
 
 file_ = "GAP_power_consumption"
-url = "/content/drive/My Drive/Colab Notebooks/Meta-ARIMA/datasets/GAP_power_consumption.csv"    
+url = "GAP_power_consumption.csv"    
 series = pd.read_csv(url, sep=",", squeeze=True)
 series = pd.to_numeric(series, errors='coerce')
 series = pd.Series(np.nan_to_num(series))
@@ -64,7 +64,7 @@ series = pd.Series(np.nan_to_num(series))
 
 #trocar para cada conta do COLAB!!! *******************************************
 series = series[1000000:]
-output_file = "/content/drive/My Drive/Colab Notebooks/Meta-ARIMA/dataset_v2.csv"
+output_file = "dataset_v2.csv"
 
 
 if (os.path.exists(output_file)):
