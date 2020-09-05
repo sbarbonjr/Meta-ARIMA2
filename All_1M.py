@@ -49,8 +49,8 @@ def evaluate_models(dataset, p_values, d_values, q_values):
         except:
           continue
   #print('Melhor ARIMA%s RMSE=%.3f' % (best_cfg, best_score))
-  wandb.log({"Best RMSE": [best_score]})
-  wandb.log({"Best p": [best_cfg[0]]})
+  wandb.log({"Best RMSE": best_score})
+  wandb.log({"Best p": best_cfg[0]})
   wandb.log({"Best d": best_cfg[1]})
   wandb.log({"Best q": best_cfg[2]})
   return best_cfg, best_score
@@ -63,7 +63,7 @@ series = pd.Series(np.nan_to_num(series))
 
 
 #trocar para cada conta do COLAB!!! *******************************************
-series = series[1000000:]
+series = series[200000:]
 output_file = "dataset_v2.csv"
 
 
